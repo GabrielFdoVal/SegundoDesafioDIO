@@ -9,12 +9,10 @@ namespace SegundoDesafioDIO
     public class Serie : EntidadeBase
     {
         private string titulo;
-
         private string descricao;
-
         private int ano;
-
         private Genero genero;
+        private bool excluido;
 
         public Serie(string titulo, string descricao, int ano, Genero genero, int id)
         {
@@ -23,6 +21,7 @@ namespace SegundoDesafioDIO
             this.ano = ano;
             this.genero = genero;
             this.id = id;
+            this.excluido = false;
         }
 
         public override string ToString()
@@ -43,6 +42,19 @@ namespace SegundoDesafioDIO
         public int getID()
         {
             return this.id;
+        }
+
+        public bool estaVazio()
+        {
+            if(this.titulo == null && Convert.ToString(this.id) == null){
+                return true;
+            }
+            return false;
+        }
+
+        public void Excluir()
+        {
+            this.excluido = true;
         }
     }
 }
