@@ -17,7 +17,7 @@ namespace SegundoDesafioDIO
 
         public void Exclui(int id)
         {
-            throw new NotImplementedException();
+            listaSerie[id].Excluir();
         }
 
         public void Insere(Serie entidade)
@@ -30,17 +30,17 @@ namespace SegundoDesafioDIO
 
         public List<Serie> Lista()
         {
-            throw new NotImplementedException();
+            return listaSerie;
         }
-
+    
         public int ProximoId()
         {
-            throw new NotImplementedException();
+            return listaSerie.Count();
         }
 
         public Serie RetornaPorId(int id)
         {
-            throw new NotImplementedException();
+            return listaSerie[id];
         }
     }
 }

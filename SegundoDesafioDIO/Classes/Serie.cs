@@ -14,7 +14,7 @@ namespace SegundoDesafioDIO
         private Genero genero;
         private bool excluido;
 
-        public Serie(string titulo, string descricao, int ano, Genero genero, int id)
+        public Serie(int id, string titulo, string descricao, int ano, Genero genero)
         {
             this.titulo = titulo;  
             this.descricao = descricao;
@@ -55,6 +55,11 @@ namespace SegundoDesafioDIO
         public void Excluir()
         {
             this.excluido = true;
+        }
+
+        public bool estaExcluida()
+        {
+            return excluido;
         }
     }
 }
